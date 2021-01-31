@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="style.css" rel="stylesheet">
+    <script src="dragdrop.js"></script>
+    <title>Enline</title>
+</head>
+<body>
+    <!--topNav Bar-->
+    <nav>
+        <div class="logo">
+            <img src="Enline Logo.png" alt="logo">
+            <h4>Enline</h4>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#top-rectangle">About us </a></li>
+            <li><a href="#middle-box">convert text</a></li>
+        </ul>
+    </nav> 
+
+    <!--Top Box-->
+    <div id="top-rectangle">
+        <div class="mission-statement">
+            <h1>Our mission is to overcome the language barrier beween teachers and their ESL students.</h1>
+            <p> 
+                The Covid-19 Pandemic has made learning for ESL students extremely difficult. Many find it very hard, almost impossible, to understand what their teachers are teaching in an online environment. However, English is a much-needed language in today's world. It is the language of academia, as most post-secondary education classes are taught in English, even in countries where it is not the native language. That is why we created enline. enline is a simple to use online platform that allows ESL teachers to upload their lessons onto our cloud and translate them to their students' preferred languages. English is a complex language to learn, and we believe the learning experience should be made as easy as possible for all students.
+            </p>
+        </div>
+    </div>
+    
+
+    <!--Middle Box-->
+    <div id="middle-box" class="middle">
+        <div class="translate">
+            <h2>Translate</h2>
+            <h5>Add recoding Here</h5>
+        </div>
+            <form id="dropFileForm" action="http://localhost/upload.php" method="post" onsubmit="uploadFiles(event)">
+                <input type="file" name="files[]" id="fileInput" multiple onchange="addFiles(event)">
+              
+                <label for="fileInput" id="fileLabel" ondragover="overrideDefault(event);fileHover();" ondragenter="overrideDefault(event);fileHover();" ondragleave="overrideDefault(event);fileHoverEnd();" ondrop="overrideDefault(event);fileHoverEnd();
+                      addFiles(event);">
+                  <i class="fa fa-download fa-5x"></i>
+                  <br>
+                  <span id="fileLabelText">
+                    Choose a file or drag it here
+                  </span>
+                  <br>
+                  <span id="uploadStatus"></span>
+                </label>
+              
+                <input type="submit" value="Upload" class="uploadButton">
+              </form>
+
+                <div class="dropdown">          
+                    <button class="dropbtn">languages</button>
+                    <div class="dropdown-content">
+                        <select id="languages" name="languages">
+                            <option value="fil">Filipino</option>
+                            <option value="es">Spanish - español</option>
+                            <option value="zh-CN">Chinese (Simplified) - 中文（简体）</option>
+                            <option value="ru">Russian - русский</option>
+                            <option value="ko">Korean - 한국어</option>
+                            <option value="ar">Arabic - العربية</option>
+                            <option value="fr-FR">French (France) - français (France)</option>
+                            <option value="de">German - Deutsch</option>
+                            <option value="hi">Hindi - हिन्दी</option>
+                            <option value="vi">Vietnamese - Tiếng Việt</option>
+                        </select>
+                    </div>
+                    <i class="bi bi-arrow-right"></i>
+                    <button type="submit" id="translate-button">translate text!</button>
+                </div>    
+    </div>
+
+
+    <!--bottom box-->
+    <div id="low-box">
+        <div class="translated-text">
+            <h2>Translated Text</h3>
+        </div>
+        <div class="text-holder">
+            <h6>Translated text</h6>
+        </div>
+        <button onclick="topFunction()" id="redo" title="Go to top">redo</button>
+    </div>
+
+
+    <!--footer-->
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="Enline Logo.png" alt="logo">
+                <h3>Enline</h3>
+            </div>
+            <ul class="socials">
+                <li><a href="https://www.instagram.com/?hl=en"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="https://discord.com/"><i class="bi bi-discord"></i></a></li>
+            </ul>
+            <div class="contact-us">
+                <h4>Contact us</h4>
+                <p>enline@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>copyright &copy;2020 code0pacicity. designed by<span>Mayuka, Kaitlyn, Rohan, Kelly</span></p>
+        </div>
+</body>
+</html>
