@@ -1,0 +1,58 @@
+*{
+    text-decoration:none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+    font-family: 'Mukta Vaani', sans-serif;
+    text-transform: uppercase;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--darkBlue);
+}
+
+img{
+    width: 10vh;
+}
+
+.logo{
+    display: flex;
+    font-weight: bold;
+    color: var(--mainBlue);
+    font-size: 2vh;
+    letter-spacing: 2vh;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    align-items: center;
+}
+
+.nav-links a{
+    position: relative;
+    color: var(--mainBlue);
+    letter-spacing: .5vh;
+    font-size: 1hv;
+    left: 20vh;
+}
+
+.nav-links a:hover{
+    color: var(--offwhite);
+}
+
+:root{
+    --mainBlue: #71CDF4;
+    --orange: #F78F20;
+    --darkBlue: #00457C;
+    --offwhite: #FFF4F4;
+}
+
+

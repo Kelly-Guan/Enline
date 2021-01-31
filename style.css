@@ -1,0 +1,61 @@
+*{
+    text-decoration:none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+    font-family: 'Mukta Vaani', sans-serif;
+    text-transform: uppercase;
+}
+
+.top-rectangle{
+    background-color: var(--mainBlue);
+    height: 40%;
+    width: 100%;
+  }
+
+.mission-statement{
+   padding: 4vh;
+}
+
+.mission-statement h1{
+    color: var(--orange);
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-align: left;
+    max-width: 55%;
+}
+
+.mission-statement p{
+    max-width: 80%;
+    font-size: 1.75vh;
+}
+
+.middle-box{
+    background-color: var(--offwhite);
+    width: 100%;
+    height: 50vh;
+}
+
+.translate{
+    padding: 4vh;
+    letter-spacing: 3px;
+}
+
+.low-box{
+    background-color: var(--mainBlue);
+    height: 100%;
+    width: 100%;  
+}
+
+.translated-text {
+    padding: 4vh;
+    letter-spacing: 3px;
+}
+
+  :root{
+    --mainBlue: #71CDF4;
+    --orange: #F78F20;
+    --darkBlue: #00457C;
+    --offwhite: #FFF4F4;
+}
